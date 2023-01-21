@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* nao soma o preencimento interno */
+}
+
+body {
+  color: white;
+  background-color: #09090a;
+  height: 100vh; /* height = altura | 100% | vh = viewport height */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* espaço entre os elementos -> um em cada ponta */
+
+  padding: 48px;
+
+  position: fixed;
+  width: 100%;
+
+}
+
+button {
+  padding: 16px 24px; /* 16 (top e bottom) 24 (left e right) */
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
+  background-color: transparent;
+  color: white;
+
+  display: flex; /* disposição flexivel dos elementos */
+  align-items: center; /* só funciona com display = flex */
+  gap: 12px; /* só funciona com display = flex | espaço entre os elemento */
+
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+  padding: 182px 48px 48px;
+  width: fit-content; /* encaixar à largura*/
+}
+
+.habits {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  line-height: 125%;
+
+  color: #a1a1aa;
+
+  text-align: center;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272a;
+  border-radius: 10px;
+
+  background-color: #18181b;
+}
+
+/* pseudo-selector */
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+
+@media (max-width: 570px) {
+  button div{
+    display: none;
+  }
+}
