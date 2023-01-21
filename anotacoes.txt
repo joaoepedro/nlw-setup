@@ -1,2 +1,0 @@
-place-items: center;    /* nao funcionna sem o display-grid */
-display: grid; /* visualização dos elementos dentro da tag (no caso body) */
